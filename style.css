@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+
+:root{
+    --accent: #EA5959;
+    --size: 47px
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--accent);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.toDo {
+    padding: 32px;
+    background-color: white;
+    max-width: 983px;
+    max-height: 702px;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.toDo-new {
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.toDo-new input {
+    background: #F3F3F3;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #B5B5B5;
+    border: none;
+    height: var(--size);
+    padding: 10px 0 15px 27px;
+    flex-grow: 1;
+}
+
+.toDo-delete-task {
+    border-radius: 8px;
+    background: #EA5959;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: auto;
+    line-height: 22px;
+    color: #000000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    padding: 2px;
+
+}
+
+.toDo-task:hover .toDo-delete-task{
+    display: flex;
+}
+
+.toDo-add {
+    border-radius: 8px;
+    background: #EA5959;
+    height: var(--size);
+    width: var(--size);
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 16px;
+    line-height: 22px;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.toDo-list {
+    padding-top: 32px;
+}
+
+.toDo-task {
+    display: flex;
+    min-height: 24px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.toDo-list .toDo-task:last-child {
+    margin-bottom: 0;
+}
+
+.toDo-task-name {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #5A5A5A;
+    margin-left: 18px;
+}
+
+.toDo-check input{
+    display: none;
+}
+.toDo-check div{
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    color: white;
+}
+.toDo-check div:after{
+    content: '✓';
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.toDo-check input:checked+div{
+    background-color: var(--accent);
+}
+
+.toDo-check input:checked+div::after{
+    display: block;
+}
