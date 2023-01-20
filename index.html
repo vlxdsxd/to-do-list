@@ -2,33 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>To Do list</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="index.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task List 2023</title>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="toDo">
-    <div class="toDo-content">
-      <h1 class="toDo-title">All Tasks</h1>
-      <div class="toDo-new">
-        <input placeholder="Add a new task" id="newTask">
-        <button class="toDo-add" id="addTask">
-          +
-        </button>
-      </div>
+
+<header>
+  <h1>Task List 2023</h1>
+  <form id="new-task-form">
+    <input
+        type="text"
+        name="new-task-input"
+        id="new-task-input"
+        placeholder="What do you have planned?" />
+    <input
+        type="submit"
+        id="new-task-submit"
+        value="Add task" />
+  </form>
+</header>
+<main>
+  <section class="task-list">
+    <h2>Tasks</h2>
+
+    <div id="tasks">
+
+      <!-- <div class="task">
+        <div class="content">
+          <input
+            type="text"
+            class="text"
+            value="A new task"
+            readonly>
+        </div>
+        <div class="actions">
+          <button class="edit">Edit</button>
+          <button class="delete">Delete</button>
+        </div>
+      </div> -->
+
     </div>
-    <div class="toDo-list" id="AllList">
-      <div class="toDo-task">
-        <label class="toDo-check">
-          <input type="checkbox">
-          <div></div>
-        </label>
-        <p class="toDo-task-name">Get a new helmet</p>
-        <button class="toDo-delete-task" id="addDelete">
-          -
-        </button>
-      </div>
-    </div>
-  </div>
+  </section>
+</main>
+
+<script src="index.js"></script>
 </body>
 </html>
